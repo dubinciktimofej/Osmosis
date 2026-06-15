@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<!-- БЭМ-блок: header -->
+<!-- БЭМ-блок header-->
 <header class="header">
   <div class="header__logo">А-А-А ОСМОС</div>
   <nav class="nav">
@@ -24,14 +24,14 @@
 
 <main>
 
-  <!-- БЭМ-блок: hero -->
+  <!-- БЭМ-блок hero-->
   <section class="hero" id="hero">
     <h1 class="hero__title">Обратные осмосы</h1>
     <p class="hero__text">Надёжность и долговечность - это про нас.</p>
     <a class="hero__btn" href="#about">Узнать больше</a>
   </section>
 
-  <!-- БЭМ-блок: about -->
+  <!-- БЭМ-блок about -->
   <section class="about" id="about">
     <div class="about__container">
       <h2 class="about__title">О продукте</h2>
@@ -45,22 +45,20 @@
             <li class="about__item">✔ Ремонтнопригодность</li>
           </ul>
         </div>
-        <!-- src="images/about.jpg" — положите файл в папку images/ -->
         <img class="about__img" src="images/about.jpg" alt="Фото продукта">
       </div>
     </div>
   </section>
 
-  <!-- БЭМ-блок: gallery (слайдер) -->
+  <!-- БЭМ-блок gallery (слайдер)-->
   <section class="gallery" id="gallery">
     <div class="gallery__container">
       <h2 class="gallery__title">Галерея</h2>
       <div class="slider">
-        <!-- src="images/slide1.jpg" — замените на свои картинки -->
         <div class="slider__slide slider__slide--active"><img class="slider__img" src="images/slide1.jpg" alt="Слайд 1"></div>
         <div class="slider__slide"><img class="slider__img" src="images/slide2.jpg" alt="Слайд 2"></div>
-        <div class="slider__slide"><img class="slider__img" src="images/slide4.jpg" alt="Слайд 3"></div>
-        <div class="slider__slide"><img class="slider__img" src="images/slide3.jpg" alt="Слайд 4"></div>
+        <div class="slider__slide"><img class="slider__img" src="images/slide3.jpg" alt="Слайд 3"></div>
+        <div class="slider__slide"><img class="slider__img" src="images/slide4.jpg" alt="Слайд 4"></div>
         <button class="slider__btn slider__btn--prev">&#8592;</button>
         <button class="slider__btn slider__btn--next">&#8594;</button>
         <div class="slider__dots"></div>
@@ -70,7 +68,7 @@
 
 </main>
 
-<!-- БЭМ-блок: footer -->
+<!-- БЭМ-блок footer-->
 <footer class="footer" id="contacts">
   <div class="footer__container">
     <h2 class="footer__title">Контакты</h2>
@@ -88,10 +86,6 @@
 
       <div class="footer__col">
         <h3 class="footer__heading">Мы на карте</h3>
-        <!--
-          Свой адрес: поменяйте текст после q= (пробелы через +)
-          Или вставьте iframe из maps.google.com → Поделиться → Встроить карту
-        -->
         <iframe class="footer__map"
          src="https://maps.google.com/maps?q=ул.+Освобождения,+11А,+Ростов-на-Дону&hl=ru&z=17&output=embed"
           title="Карта офиса" loading="lazy" allowfullscreen></iframe>
@@ -158,6 +152,5 @@
   }, { threshold: 0.4 });
   document.querySelectorAll('section[id], footer[id]').forEach(s => io.observe(s));
 </script>
-
 </body>
 </html>
