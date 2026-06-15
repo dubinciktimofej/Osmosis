@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Описание продукта">
+  <meta name="keywords" content="продукт, ключевые слова">
+  <title>Мой сайт</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- БЭМ-блок: header -->
+<header class="header">
+  <div class="header__logo">А-А-А ОСМОС</div>
+  <nav class="nav">
+    <ul class="nav__list">
+      <li class="nav__item"><a class="nav__link" href="#about">О продукте</a></li>
+      <li class="nav__item"><a class="nav__link" href="#gallery">Галерея</a></li>
+      <li class="nav__item"><a class="nav__link" href="#contacts">Контакты</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <!-- БЭМ-блок: hero -->
+  <section class="hero" id="hero">
+    <h1 class="hero__title">Обратные осмосы</h1>
+    <p class="hero__text">Надёжность и долговечность - это про нас.</p>
+    <a class="hero__btn" href="#about">Узнать больше</a>
+  </section>
+
+  <!-- БЭМ-блок: about -->
+  <section class="about" id="about">
+    <div class="about__container">
+      <h2 class="about__title">О продукте</h2>
+      <div class="about__inner">
+        <div class="about__text">
+          <p>Наша компания занимается производством, монтажом и сервисным обслуживанием систем обратного осмоса производительностью от 0,2 до 10 м³/ч.</p>
+          <p>Cистемы отличаются высокой надёжностью, долговечностью и ремонтопригодностью. Установки сконструированы на рамах из нержавеющей стали, в качестве запорной регулирующей арматуры используется высококачественные краны с электроприводом, игольчатые вентели для регулировки потоков. Реализован ручной и автоматический режимы работы, рециркуляция концентрата и ополаскивание мембран чистой водой. Существуют серийные установки и установки, смоделированные под конкретный анализ воды. Фактический срок службы установок более 10 лет.</p>
+          <ul class="about__list">
+            <li class="about__item">✔ Долговечность</li>
+            <li class="about__item">✔ Надёжность</li>
+            <li class="about__item">✔ Ремонтнопригодность</li>
+          </ul>
+        </div>
+        <!-- src="images/about.jpg" — положите файл в папку images/ -->
+        <img class="about__img" src="images/about.jpg" alt="Фото продукта">
+      </div>
+    </div>
+  </section>
+
+  <!-- БЭМ-блок: gallery (слайдер) -->
+  <section class="gallery" id="gallery">
+    <div class="gallery__container">
+      <h2 class="gallery__title">Галерея</h2>
+      <div class="slider">
+        <!-- src="images/slide1.jpg" — замените на свои картинки -->
+        <div class="slider__slide slider__slide--active"><img class="slider__img" src="images/slide1.jpg" alt="Слайд 1"></div>
+        <div class="slider__slide"><img class="slider__img" src="images/slide2.jpg" alt="Слайд 2"></div>
+        <div class="slider__slide"><img class="slider__img" src="images/slide3.jpg" alt="Слайд 3"></div>
+        <button class="slider__btn slider__btn--prev">&#8592;</button>
+        <button class="slider__btn slider__btn--next">&#8594;</button>
+        <div class="slider__dots"></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- БЭМ-блок: footer -->
+<footer class="footer" id="contacts">
+  <div class="footer__container">
+    <h2 class="footer__title">Контакты</h2>
+    <div class="footer__grid">
+
+      <div class="footer__col">
+        <h3 class="footer__heading">Свяжитесь с нами</h3>
+        <address class="footer__address">
+          <p><span class="footer__label">Телефон:</span> <a class="footer__link" href="tel:+7XXXXXXXXXX">+7 (919) 879-28-07</a></p>
+          <p><span class="footer__label">Менеджер:</span> Дубинчик Александр Валерьевич</p>
+          <p><span class="footer__label">Email:</span> <a class="footer__link" href="mailto:info@example.com">Watermaster79@rambler.ru</a></p>
+          <p><span class="footer__label">Адрес:</span> г. Ростов-на-Дону, ул. Освобождения, д. 11а, этаж 1, офис 5</p>
+        </address>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__heading">Мы на карте</h3>
+        <!--
+          Свой адрес: поменяйте текст после q= (пробелы через +)
+          Или вставьте iframe из maps.google.com → Поделиться → Встроить карту
+        -->
+        <iframe class="footer__map"
+         src="https://maps.google.com/maps?q=ул.+Освобождения,+11А,+Ростов-на-Дону&hl=ru&z=17&output=embed"
+          title="Карта офиса" loading="lazy" allowfullscreen></iframe>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__heading">Написать нам</h3>
+        <form class="form" id="contactForm">
+          <label class="form__label" for="userName">Имя</label>
+          <input class="form__input" type="text" id="userName" placeholder="Ваше имя" required>
+          <label class="form__label" for="userEmail">Email</label>
+          <input class="form__input" type="email" id="userEmail" placeholder="Ваша почта" required>
+          <button class="form__btn" type="submit">Отправить</button>
+          <p class="form__success" id="formSuccess" hidden>Спасибо! Мы свяжемся с вами.</p>
+        </form>
+      </div>
+
+    </div>
+    <p class="footer__copy">&copy; 2026. Все права защищены.</p>
+  </div>
+</footer>
+
+<script>
+  // СЛАЙДЕР (DOM: createElement, classList, querySelectorAll)
+  const slides = document.querySelectorAll('.slider__slide');
+  const dotsBox = document.querySelector('.slider__dots');
+  let cur = 0;
+
+  function show(i) {
+    slides.forEach((s, j) => s.classList.toggle('slider__slide--active', i === j));
+    document.querySelectorAll('.slider__dot').forEach((d, j) => d.classList.toggle('slider__dot--active', i === j));
+    cur = i;
+  }
+
+  slides.forEach((_, i) => {
+    const d = document.createElement('button');
+    d.className = 'slider__dot';
+    d.onclick = () => show(i);
+    dotsBox.appendChild(d);
+  });
+
+  document.querySelector('.slider__btn--next').onclick = () => show((cur + 1) % slides.length);
+  document.querySelector('.slider__btn--prev').onclick = () => show((cur - 1 + slides.length) % slides.length);
+  show(0);
+
+  // ФОРМА
+  document.getElementById('contactForm').onsubmit = function(e) {
+    e.preventDefault();
+    if (!userName.value.trim() || !userEmail.value.trim()) { alert('Заполните все поля.'); return; }
+    formSuccess.hidden = false;
+    this.reset();
+    setTimeout(() => formSuccess.hidden = true, 4000);
+  };
+
+  // АКТИВНАЯ ССЫЛКА В NAV (DOM: IntersectionObserver)
+  const navLinks = document.querySelectorAll('.nav__link');
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      navLinks.forEach(l => l.classList.remove('nav__link--active'));
+      const l = document.querySelector(`.nav__link[href="#${e.target.id}"]`);
+      if (l) l.classList.add('nav__link--active');
+    });
+  }, { threshold: 0.4 });
+  document.querySelectorAll('section[id], footer[id]').forEach(s => io.observe(s));
+</script>
+
+</body>
+</html>
